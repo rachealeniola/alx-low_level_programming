@@ -4,18 +4,21 @@
  * main - prints all possible combinations of single-digit numbers
  *
  * Description: using main function
- * Return:0
+ * Return: 0
  */
 int main(void)
 {
-	int x;
+	int num = 0;
 
-	for (x = 0; x <= 9; x++)
+	for (; num < 9;  num++)
 	{
-		putchar((x % 10) + '0');
-		if (x == 9)
+		putchar(num);
+		if (num < 8)
 		{
 			putchar(',');
+		}
+		if (num == 8)
+		{
 			putchar(' ');
 		}
 	}
